@@ -9,14 +9,7 @@ pg.init()
 
 pg.display.init()
 
-screen = pg.display.set_mode((800, 800))
-pg.display.set_caption("Cat aquarium")
-
-
-class Sprite(pg.sprite.Sprite):
-    def __init__(self, path: str, size: tuple[int | float, int | float], pos: tuple[int | float, int | float], *groups):
-        super().__init__(*groups)
-        self.image = pg.image.load(path).convert_alpha()
+scree(path).convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.x = pos[0]
         self.rect.y = pos[1]
